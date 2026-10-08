@@ -14,7 +14,6 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
 
         <div class="logo">
@@ -31,7 +30,6 @@
     </nav>
 
 
-    <!-- Apply Section -->
     <section class="apply-section">
 
         <div class="apply-card">
@@ -69,52 +67,27 @@
 
                 <label>Name</label>
 
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter your full name"
-                    required
-                >
+                <input type="text" name="name" placeholder="Enter your full name" required>
 
 
                 <label>Email</label>
 
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+                <input type="email" name="email" placeholder="Enter your email" required>
 
 
                 <label>Phone</label>
 
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    required
-                >
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
 
 
                 <label>Resume</label>
 
-                <input
-                    type="file"
-                    name="resume"
-                    accept=".pdf,.doc,.docx"
-                    required
-                >
+                <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
 
 
                 <label>Cover Letter</label>
 
-                <textarea
-                    name="cover_letter"
-                    rows="6"
-                    placeholder="Write your cover letter..."
-                    required
-                ></textarea>
+                <textarea name="cover_letter" rows="6" placeholder="Write your cover letter..." required></textarea>
 
 
                 <button type="submit" class="apply-submit-btn">
@@ -124,10 +97,7 @@
             </form>
 
 
-            <a
-                href="/jobs/{{ job.id }}/"
-                class="back-jobs-btn apply-back"
-            >
+            <a href="/jobs/{{ job.id }}/" class="back-jobs-btn apply-back">
                 ← Back to Job Details
             </a>
 
@@ -135,8 +105,6 @@
 
     </section>
 
-
-    <!-- Footer -->
     <footer>
 
         <p>

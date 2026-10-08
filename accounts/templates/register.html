@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +27,9 @@
             </p>
 
             {% if error %}
-                <div class="error-message">
-                    {{ error }}
-                </div>
+            <div class="error-message">
+                {{ error }}
+            </div>
             {% endif %}
 
             <form method="POST">
@@ -37,30 +38,15 @@
 
                 <label>Username</label>
 
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Choose a username"
-                    required
-                >
+                <input type="text" name="username" placeholder="Choose a username" required>
 
                 <label>Email</label>
 
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
+                <input type="email" name="email" placeholder="Enter your email" required>
 
                 <label>Password</label>
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Create a password"
-                    required
-                >
+                <input type="password" name="password" placeholder="Create a password" required>
 
                 <button type="submit" class="auth-btn">
                     Create Account
@@ -82,4 +68,5 @@
     </div>
 
 </body>
+
 </html>

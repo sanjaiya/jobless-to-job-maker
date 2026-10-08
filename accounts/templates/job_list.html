@@ -14,7 +14,6 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
 
         <div class="logo">
@@ -31,7 +30,6 @@
     </nav>
 
 
-    <!-- Jobs Section -->
     <section class="jobs-section">
 
         <div class="jobs-header">
@@ -45,15 +43,9 @@
         </div>
 
 
-        <!-- Search -->
         <form method="GET" class="job-search">
 
-            <input
-                type="text"
-                name="search"
-                value="{{ search|default:'' }}"
-                placeholder="Search jobs..."
-            >
+            <input type="text" name="search" value="{{ search|default:'' }}" placeholder="Search jobs...">
 
             <button type="submit">
                 Search
@@ -61,8 +53,6 @@
 
         </form>
 
-
-        <!-- Job Cards -->
         <div class="jobs-container">
 
             {% for job in jobs %}
@@ -97,10 +87,7 @@
                     {{ job.description }}
                 </p>
 
-                <a
-                    href="/jobs/{{ job.id }}/"
-                    class="job-btn"
-                >
+                <a href="/jobs/{{ job.id }}/" class="job-btn">
                     View Details
                 </a>
 
@@ -125,7 +112,6 @@
     </section>
 
 
-    <!-- Footer -->
     <footer>
 
         <p>
