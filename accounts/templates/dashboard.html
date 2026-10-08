@@ -1,0 +1,237 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Jobless to Job Maker</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Jobless to Job Maker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/jobs/">
+                Jobs
+            </a>
+
+            <a href="/logout/">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+
+        <div class="dashboard-header">
+
+            <h1>Welcome, {{ user.username }} 👋</h1>
+
+            <p>
+                Improve your skills, prepare for interviews
+                and find your dream job.
+            </p>
+
+        </div>
+
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-container">
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    💼
+                </div>
+
+                <h2>Find Jobs</h2>
+
+                <p>
+                    Explore available job opportunities
+                    and apply for suitable positions.
+                </p>
+
+                <a href="/jobs/" class="dashboard-btn">
+                    Explore Jobs
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    📝
+                </div>
+
+                <h2>Basic Skill Test</h2>
+
+                <p>
+                    Test your basic programming and
+                    technical knowledge.
+                </p>
+
+                <a href="/basic-test/" class="dashboard-btn">
+                    Take Test
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    💬
+                </div>
+
+                <h2>Communication</h2>
+
+                <p>
+                    Practice communication skills and
+                    improve your confidence.
+                </p>
+
+                <a href="/communication/" class="dashboard-btn">
+                    Start Assessment
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    👥
+                </div>
+
+                <h2>Team Discussion</h2>
+
+                <p>
+                    Practice discussion topics and
+                    improve your speaking skills.
+                </p>
+
+                <a href="/team-discussion/" class="dashboard-btn">
+                    Practice
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    💻
+                </div>
+
+                <h2>Technical Assessment</h2>
+
+                <p>
+                    Test your Python, Django and
+                    SQL knowledge.
+                </p>
+
+                <a href="/technical-assessment/" class="dashboard-btn">
+                    Take Assessment
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    🎯
+                </div>
+
+                <h2>Interview Readiness</h2>
+
+                <p>
+                    Check your confidence and
+                    interview preparation.
+                </p>
+
+                <a href="/interview-readiness/" class="dashboard-btn">
+                    Check Readiness
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Assessment Progress -->
+
+        <div class="progress-section">
+
+            <h2>📊 Your Assessment Progress</h2>
+
+            <div class="progress-container">
+
+                <div class="progress-card">
+                    <h3>📝 Basic Skill</h3>
+                    <p>{{ basic_score }} / 5</p>
+                </div>
+
+                <div class="progress-card">
+                    <h3>💻 Technical</h3>
+                    <p>{{ technical_score }} / 5</p>
+                </div>
+
+                <div class="progress-card">
+                    <h3>🎯 Interview Readiness</h3>
+                    <p>{{ interview_score }} / 5</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Final Result -->
+        <div class="final-result-card">
+
+            <h2>🏆 Check Your Final Result</h2>
+
+            <p>
+                View your overall assessment score
+                and interview readiness.
+            </p>
+
+            <a href="/final-result/" class="final-result-btn">
+                View Final Result
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Jobless to Job Maker. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

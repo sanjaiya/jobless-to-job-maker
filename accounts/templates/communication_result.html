@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Communication Assessment Result</title>
+</head>
+
+<body>
+
+    <h1>Communication Assessment Result</h1>
+
+    <h2>Your Answers</h2>
+
+    <h3>1. Tell us about yourself.</h3>
+    <p>{{ q1 }}</p>
+
+    <h3>2. Why do you want to become a software developer?</h3>
+    <p>{{ q2 }}</p>
+
+    <h3>3. What are your strengths?</h3>
+    <p>{{ q3 }}</p>
+
+    <h3>4. Why should we hire you?</h3>
+    <p>{{ q4 }}</p>
+
+    <h3>5. Where do you see yourself in the next five years?</h3>
+    <p>{{ q5 }}</p>
+
+    <br>
+
+    <a href="{% url 'dashboard' %}">
+        <button>Back to Dashboard</button>
+    </a>
+
+</body>
+
+</html>

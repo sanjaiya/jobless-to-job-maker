@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs - Jobless to Job Maker</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Jobless to Job Maker
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs/">Jobs</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/logout/">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Jobs Section -->
+    <section class="jobs-section">
+
+        <div class="jobs-header">
+
+            <h1>Find Your Dream Job 💼</h1>
+
+            <p>
+                Explore job opportunities and start your career journey.
+            </p>
+
+        </div>
+
+
+        <!-- Search -->
+        <form method="GET" class="job-search">
+
+            <input
+                type="text"
+                name="search"
+                value="{{ search|default:'' }}"
+                placeholder="Search jobs..."
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <!-- Job Cards -->
+        <div class="jobs-container">
+
+            {% for job in jobs %}
+
+            <div class="job-card">
+
+                <div class="job-icon">
+                    💼
+                </div>
+
+                <h2>
+                    {{ job.title }}
+                </h2>
+
+                <h3>
+                    {{ job.company_name }}
+                </h3>
+
+                <div class="job-info">
+                    📍 {{ job.location }}
+                </div>
+
+                <div class="job-info">
+                    💰 {{ job.salary }}
+                </div>
+
+                <div class="job-info">
+                    🛠 {{ job.skills }}
+                </div>
+
+                <p>
+                    {{ job.description }}
+                </p>
+
+                <a
+                    href="/jobs/{{ job.id }}/"
+                    class="job-btn"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+            {% empty %}
+
+            <div class="no-jobs">
+
+                <h2>No Jobs Found</h2>
+
+                <p>
+                    Try searching with a different keyword.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Jobless to Job Maker. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

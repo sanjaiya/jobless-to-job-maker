@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Discussion</title>
+</head>
+
+<body>
+
+    <h1>Team Discussion</h1>
+
+    <p>Choose a topic and share your opinion.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h3>Select a Topic</h3>
+
+        <select name="topic" required>
+
+            <option value="">-- Select Topic --</option>
+
+            <option value="Artificial Intelligence">
+                Is Artificial Intelligence helpful or harmful?
+            </option>
+
+            <option value="Work From Home">
+                Work From Home vs Work From Office
+            </option>
+
+            <option value="Communication Skills">
+                Importance of Communication Skills
+            </option>
+
+            <option value="Social Media">
+                Social Media - Advantages and Disadvantages
+            </option>
+
+            <option value="Technology">
+                Is Technology making our life easier?
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <h3>Write your opinion</h3>
+
+        <textarea
+            name="response"
+            rows="8"
+            cols="70"
+            placeholder="Write your opinion here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Submit Discussion
+        </button>
+
+    </form>
+
+</body>
+
+</html>

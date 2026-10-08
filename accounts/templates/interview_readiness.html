@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interview Readiness</title>
+</head>
+
+<body>
+
+    <h1>Interview Readiness Assessment</h1>
+
+    <p>Answer the following questions honestly.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h3>1. Are you confident in your technical skills?</h3>
+
+        <input type="radio" name="q1" value="yes" required>
+        Yes
+        <br>
+
+        <input type="radio" name="q1" value="no">
+        No
+
+        <br><br>
+
+
+        <h3>2. Are you comfortable explaining your projects?</h3>
+
+        <input type="radio" name="q2" value="yes" required>
+        Yes
+        <br>
+
+        <input type="radio" name="q2" value="no">
+        No
+
+        <br><br>
+
+
+        <h3>3. Can you answer basic Python and SQL questions?</h3>
+
+        <input type="radio" name="q3" value="yes" required>
+        Yes
+        <br>
+
+        <input type="radio" name="q3" value="no">
+        No
+
+        <br><br>
+
+
+        <h3>4. Are you comfortable communicating with an interviewer?</h3>
+
+        <input type="radio" name="q4" value="yes" required>
+        Yes
+        <br>
+
+        <input type="radio" name="q4" value="no">
+        No
+
+        <br><br>
+
+
+        <h3>5. Are you ready to attend a job interview?</h3>
+
+        <input type="radio" name="q5" value="yes" required>
+        Yes
+        <br>
+
+        <input type="radio" name="q5" value="no">
+        No
+
+        <br><br>
+
+        <button type="submit">
+            Check Interview Readiness
+        </button>
+
+    </form>
+
+</body>
+
+</html>

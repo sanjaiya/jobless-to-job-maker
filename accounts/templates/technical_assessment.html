@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Technical Assessment</title>
+</head>
+
+<body>
+
+    <h1>Technical Assessment</h1>
+
+    <p>Answer the following technical questions.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h3>1. Which language is mainly used in this project?</h3>
+
+        <input type="radio" name="q1" value="Python" required>
+        Python
+        <br>
+
+        <input type="radio" name="q1" value="Java">
+        Java
+        <br>
+
+        <input type="radio" name="q1" value="C++">
+        C++
+        <br><br>
+
+
+        <h3>2. Which framework is used for this project?</h3>
+
+        <input type="radio" name="q2" value="Django" required>
+        Django
+        <br>
+
+        <input type="radio" name="q2" value="React">
+        React
+        <br>
+
+        <input type="radio" name="q2" value="Laravel">
+        Laravel
+        <br><br>
+
+
+        <h3>3. Which database are we using?</h3>
+
+        <input type="radio" name="q3" value="MySQL" required>
+        MySQL
+        <br>
+
+        <input type="radio" name="q3" value="MongoDB">
+        MongoDB
+        <br>
+
+        <input type="radio" name="q3" value="Oracle">
+        Oracle
+        <br><br>
+
+
+        <h3>4. Which SQL command is used to retrieve data?</h3>
+
+        <input type="radio" name="q4" value="SELECT" required>
+        SELECT
+        <br>
+
+        <input type="radio" name="q4" value="INSERT">
+        INSERT
+        <br>
+
+        <input type="radio" name="q4" value="DELETE">
+        DELETE
+        <br><br>
+
+
+        <h3>5. Which keyword is used to define a function in Python?</h3>
+
+        <input type="radio" name="q5" value="def" required>
+        def
+        <br>
+
+        <input type="radio" name="q5" value="function">
+        function
+        <br>
+
+        <input type="radio" name="q5" value="func">
+        func
+        <br><br>
+
+
+        <button type="submit">
+            Submit Technical Assessment
+        </button>
+
+    </form>
+
+</body>
+
+</html>

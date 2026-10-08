@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Skill Test</title>
+</head>
+
+<body>
+
+    <h1>Basic Skill Assessment</h1>
+
+    <p>Answer all questions and submit the test.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h3>1. Which language is used for Django development?</h3>
+
+        <input type="radio" name="q1" value="Python" required>
+        Python
+
+        <br>
+
+        <input type="radio" name="q1" value="Java">
+        Java
+
+        <br>
+
+        <input type="radio" name="q1" value="C++">
+        C++
+
+        <br><br>
+
+
+        <h3>2. Which database are we using in this project?</h3>
+
+        <input type="radio" name="q2" value="MySQL" required>
+        MySQL
+
+        <br>
+
+        <input type="radio" name="q2" value="Oracle">
+        Oracle
+
+        <br>
+
+        <input type="radio" name="q2" value="MongoDB">
+        MongoDB
+
+        <br><br>
+
+
+        <h3>3. What does CRUD stand for?</h3>
+
+        <input type="radio" name="q3" value="Create Read Update Delete" required>
+        Create, Read, Update, Delete
+
+        <br>
+
+        <input type="radio" name="q3" value="Code Run Update Delete">
+        Code, Run, Update, Delete
+
+        <br>
+
+        <input type="radio" name="q3" value="Create Run User Data">
+        Create, Run, User, Data
+
+        <br><br>
+
+
+        <h3>4. Which HTML tag is used to create a link?</h3>
+
+        <input type="radio" name="q4" value="a" required>
+        &lt;a&gt;
+
+        <br>
+
+        <input type="radio" name="q4" value="p">
+        &lt;p&gt;
+
+        <br>
+
+        <input type="radio" name="q4" value="h1">
+        &lt;h1&gt;
+
+        <br><br>
+
+
+        <h3>5. Which keyword is used to create a function in Python?</h3>
+
+        <input type="radio" name="q5" value="def" required>
+        def
+
+        <br>
+
+        <input type="radio" name="q5" value="function">
+        function
+
+        <br>
+
+        <input type="radio" name="q5" value="func">
+        func
+
+        <br><br>
+
+
+        <button type="submit">Submit Test</button>
+
+    </form>
+
+</body>
+
+</html>

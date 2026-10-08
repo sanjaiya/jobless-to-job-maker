@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ job.title }} - Jobless to Job Maker</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Jobless to Job Maker
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs/">Jobs</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/logout/">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Job Details -->
+    <section class="job-detail-section">
+
+        <div class="job-detail-card">
+
+            <div class="job-detail-icon">
+                💼
+            </div>
+
+            <h1>
+                {{ job.title }}
+            </h1>
+
+            <h2>
+                {{ job.company_name }}
+            </h2>
+
+
+            <div class="job-detail-info">
+
+                <div>
+                    📍 <strong>Location:</strong>
+                    {{ job.location }}
+                </div>
+
+                <div>
+                    💰 <strong>Salary:</strong>
+                    {{ job.salary }}
+                </div>
+
+                <div>
+                    🛠 <strong>Skills:</strong>
+                    {{ job.skills }}
+                </div>
+
+            </div>
+
+
+            <div class="job-description">
+
+                <h3>Job Description</h3>
+
+                <p>
+                    {{ job.description }}
+                </p>
+
+            </div>
+
+
+            <div class="job-detail-buttons">
+
+                <a
+                    href="/jobs/{{ job.id }}/apply/"
+                    class="apply-btn"
+                >
+                    Apply Now
+                </a>
+
+                <a
+                    href="/jobs/"
+                    class="back-jobs-btn"
+                >
+                    ← Back to Jobs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Jobless to Job Maker. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

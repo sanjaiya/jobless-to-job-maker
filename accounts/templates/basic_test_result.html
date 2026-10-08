@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Test Result</title>
+</head>
+
+<body>
+
+    <h1>Basic Skill Assessment Result</h1>
+
+    <h2>Your Score: {{ score }} / 5</h2>
+
+    {% if score >= 4 %}
+
+        <p style="color: green;">
+            Good Job! You have a good basic knowledge.
+        </p>
+
+    {% elif score >= 3 %}
+
+        <p style="color: orange;">
+            Good! Keep practicing to improve your skills.
+        </p>
+
+    {% else %}
+
+        <p style="color: red;">
+            Keep practicing and improve your basic skills.
+        </p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="{% url 'dashboard' %}">
+        <button>Back to Dashboard</button>
+    </a>
+
+</body>
+
+</html>

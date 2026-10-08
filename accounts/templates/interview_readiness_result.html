@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Readiness Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .result-box {
+            background: white;
+            width: 450px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #4b0082;
+        }
+
+        .score {
+            font-size: 40px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .message {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background: #4b0082;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        a:hover {
+            background: #35005c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="result-box">
+
+        <h1>Interview Readiness Result</h1>
+
+        <p>Your Score</p>
+
+        <div class="score">
+            {{ score }}/5
+        </div>
+
+        {% if score >= 4 %}
+            <div class="message">
+                🎉 You are ready for the interview!
+            </div>
+
+        {% elif score >= 3 %}
+            <div class="message">
+                👍 You are almost ready. Keep practicing!
+            </div>
+
+        {% else %}
+            <div class="message">
+                💪 Keep practicing and improve your confidence!
+            </div>
+        {% endif %}
+
+        <br>
+
+        <a href="{% url 'interview_readiness' %}">
+            Try Again
+        </a>
+
+        <a href="{% url 'dashboard' %}">
+            Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>

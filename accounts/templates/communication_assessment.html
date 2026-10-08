@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Communication Assessment</title>
+</head>
+
+<body>
+
+    <h1>Communication Assessment</h1>
+
+    <p>Answer the following questions in your own words.</p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <h3>1. Tell us about yourself.</h3>
+
+        <textarea
+            name="q1"
+            rows="6"
+            cols="60"
+            placeholder="Write your answer here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+
+        <h3>2. Why do you want to become a software developer?</h3>
+
+        <textarea
+            name="q2"
+            rows="6"
+            cols="60"
+            placeholder="Write your answer here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+
+        <h3>3. What are your strengths and weaknesses?</h3>
+
+        <textarea
+            name="q3"
+            rows="6"
+            cols="60"
+            placeholder="Write your answer here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+
+        <h3>4. Describe a challenge you faced and how you solved it.</h3>
+
+        <textarea
+            name="q4"
+            rows="6"
+            cols="60"
+            placeholder="Write your answer here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+
+        <h3>5. Where do you see yourself in the next five years?</h3>
+
+        <textarea
+            name="q5"
+            rows="6"
+            cols="60"
+            placeholder="Write your answer here..."
+            required
+        ></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Submit Assessment
+        </button>
+
+    </form>
+
+</body>
+
+</html>

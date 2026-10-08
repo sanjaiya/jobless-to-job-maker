@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Application Submitted</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Jobless to Job Maker
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs/">Jobs</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/logout/">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Success Section -->
+    <section class="success-section">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✅
+            </div>
+
+            <h1>
+                Application Submitted!
+            </h1>
+
+            <p>
+                Your application for
+                <strong>{{ job.title }}</strong>
+                has been submitted successfully.
+            </p>
+
+            <p class="success-message">
+                Thank you for applying. We wish you
+                all the best for your career journey! 🎉
+            </p>
+
+
+            <div class="success-buttons">
+
+                <a
+                    href="/jobs/"
+                    class="success-btn"
+                >
+                    Browse More Jobs
+                </a>
+
+                <a
+                    href="/dashboard/"
+                    class="success-secondary-btn"
+                >
+                    Go to Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Jobless to Job Maker. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

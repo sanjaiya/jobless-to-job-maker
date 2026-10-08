@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply - {{ job.title }}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Jobless to Job Maker
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/jobs/">Jobs</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/logout/">Logout</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Apply Section -->
+    <section class="apply-section">
+
+        <div class="apply-card">
+
+            <div class="apply-icon">
+                📄
+            </div>
+
+            <h1>Apply for {{ job.title }}</h1>
+
+            <p class="apply-subtitle">
+                Submit your application and take the next step
+                towards your career.
+            </p>
+
+
+            <div class="job-summary">
+
+                <strong>{{ job.company_name }}</strong>
+
+                <span>
+                    📍 {{ job.location }}
+                </span>
+
+                <span>
+                    💰 {{ job.salary }}
+                </span>
+
+            </div>
+
+
+            <form method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Phone</label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+
+                <label>Resume</label>
+
+                <input
+                    type="file"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                    required
+                >
+
+
+                <label>Cover Letter</label>
+
+                <textarea
+                    name="cover_letter"
+                    rows="6"
+                    placeholder="Write your cover letter..."
+                    required
+                ></textarea>
+
+
+                <button type="submit" class="apply-submit-btn">
+                    Submit Application
+                </button>
+
+            </form>
+
+
+            <a
+                href="/jobs/{{ job.id }}/"
+                class="back-jobs-btn apply-back"
+            >
+                ← Back to Job Details
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Jobless to Job Maker. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

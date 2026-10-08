@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .result-box {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #4b0082;
+        }
+
+        .score {
+            font-size: 45px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 20px;
+        }
+
+        .details {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .details p {
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background: #4b0082;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        a:hover {
+            background: #35005c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="result-box">
+
+        <h1>🎯 Final Result</h1>
+
+        <div class="score">
+            {{ overall_score }}%
+        </div>
+
+        <div class="details">
+
+            <p>
+                <strong>Basic Test:</strong>
+                {{ basic_score }}/5
+            </p>
+
+            <p>
+                <strong>Technical Assessment:</strong>
+                {{ technical_score }}/5
+            </p>
+
+            <p>
+                <strong>Interview Readiness:</strong>
+                {{ interview_score }}/5
+            </p>
+
+        </div>
+
+        {% if overall_score >= 80 %}
+
+            <h2>🎉 Interview Ready!</h2>
+            <p>Excellent! You are ready to attend the interview.</p>
+
+        {% elif overall_score >= 60 %}
+
+            <h2>👍 Almost Ready!</h2>
+            <p>Keep practicing to improve your skills.</p>
+
+        {% else %}
+
+            <h2>💪 Keep Practicing!</h2>
+            <p>Improve your technical and interview skills.</p>
+
+        {% endif %}
+
+        <br>
+
+        <a href="{% url 'dashboard' %}">
+            Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>
