@@ -60,13 +60,13 @@ body {
     max-width: 600px;
 }
 .hero-content h1 {
-    color: white;
+    color: black;
     font-size: 55px;
     line-height: 1.15;
     margin-bottom: 25px;
 }
 .hero-content h1 span {
-    color: blueviolet;
+    color: blue;
 }
 .hero-content p {
     color: white;
@@ -109,7 +109,7 @@ body {
     width: 360px;
     padding: 35px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid black;
     border-radius: 18px;
     color: white;
     backdrop-filter: blur(10px);
@@ -138,7 +138,7 @@ body {
 .features-section {
     padding: 70px 8%;
     text-align: center;
-    background: white;
+    background: linear-gradient(blue,orange,purple,yellow,green);
 }
 .features-section h2 {
     font-size: 34px;
@@ -160,7 +160,7 @@ body {
     padding: 30px;
     border-radius: 12px;
     background: white;
-    border: 1px solid white;
+    border: 1px solid black;
     transition: 0.3s;
 }
 .feature-box:hover {
@@ -183,7 +183,7 @@ body {
 
    /* FOOTER */
 footer {
-    background: blueviolet;
+    background: black;
     color: white;
     text-align: center;
     padding: 22px;
@@ -1173,5 +1173,78 @@ footer {
         display: block;
         margin: 10px auto;
         width: 80%;
+    }
+}
+   /* ABOUT PAGE */
+.about-section {
+    min-height: 80vh;
+    padding: 70px 8%;
+    background: linear-gradient(blue,purple,skyblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-container {
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(41, 36, 90, 0.12);
+    text-align: center;
+}
+.about-container h1 {
+    color: blueviolet;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+.about-container p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+/* About page feature cards */
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+.about-feature-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 12px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+.about-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(75, 0, 130, 0.12);
+}
+.about-feature-card h3 {
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+.about-feature-card p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+/* About page responsive design */
+@media (max-width: 700px) {
+    .about-section {
+        padding: 35px 5%;
+    }
+    .about-container {
+        padding: 30px 20px;
+    }
+    .about-container h1 {
+        font-size: 28px;
+    }
+    .about-container p {
+        font-size: 15px;
+    }
+    .about-features {
+        grid-template-columns: 1fr;
     }
 }
