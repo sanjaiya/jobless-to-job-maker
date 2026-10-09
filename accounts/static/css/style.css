@@ -138,15 +138,15 @@ body {
 .features-section {
     padding: 70px 8%;
     text-align: center;
-    background: linear-gradient(blue,orange,purple,yellow,green);
+    background: linear-gradient(blue,violet,skyblue);
 }
 .features-section h2 {
     font-size: 34px;
-    color: blueviolet;
+    color: black;
     margin-bottom: 10px;
 }
 .section-text {
-    color: #666;
+    color: black;
     margin-bottom: 40px;
 }
 .feature-container {
@@ -488,8 +488,8 @@ footer {
     max-width: 600px;
     margin: 45px auto;
     padding: 35px;
+    background-color: #7c3aed;
     text-align: center;
-    background: linear-gradient(blue,purple);
     border-radius: 25px;
     color: white;
     height: 500px;
@@ -499,7 +499,7 @@ footer {
     margin-bottom: 20px;
 }
 .result-box p {
-    color: #dddded;
+    color: whitesmoke;
     margin-bottom: 12px;
 }
 .score {
@@ -551,7 +551,7 @@ footer {
 .jobs-section {
     min-height: calc(100vh - 70px);
     padding: 60px 8%;
-    background: #f5f7fb;
+    background: linear-gradient(violet,skyblue);
 }
 .jobs-header {
     text-align: center;
